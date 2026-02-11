@@ -1,13 +1,14 @@
 function countVowels(text) {
   let count = 0;
+  const lowerCaseTest = text.toLowerCase();
 
-  for (let i = 0; i <= text.length; i++) {
+  for (let i = 0; i < lowerCaseTest.length; i++) {
     if (
-      text[i] === "a" ||
-      text[i] === "e" ||
-      text[i] === "i" ||
-      text[i] === "o" ||
-      text[i] === "u"
+      lowerCaseTest[i] === "a" ||
+      lowerCaseTest[i] === "e" ||
+      lowerCaseTest[i] === "i" ||
+      lowerCaseTest[i] === "o" ||
+      lowerCaseTest[i] === "u"
     ) {
       count++;
     }
@@ -15,3 +16,7 @@ function countVowels(text) {
 
   return count;
 }
+
+console.log(countVowels("HELLO")); // returns 2
+console.log(countVowels("javascripta")); // returns 4
+console.log(countVowels("")); // returns 0
