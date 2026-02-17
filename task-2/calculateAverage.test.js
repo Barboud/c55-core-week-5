@@ -25,13 +25,13 @@ test("Find the average from an array with a single number", () => {
 
 test("Find the average from an empty array", () => {
   // Arrange
-  const numbers = [5];
+  const numbers = [];
 
   // Act
   const result = calculateAverage(numbers);
 
   // Assert
-  expect(result).toBe(5);
+  expect(result).toBe(null);
 });
 
 test("Find the average from an array when a non-array input", () => {

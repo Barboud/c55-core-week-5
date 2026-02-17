@@ -25,36 +25,41 @@ function getTargetByLinearSearch(array, target) {
   return false;
 }
 
+const array1k = generateBigArray(1000);
+const array100k = generateBigArray(100000);
+const array1M = generateBigArray(1000000);
+const array10M = generateBigArray(10000000);
+
 console.time("Linear Search 1k");
-getTargetByLinearSearch(generateBigArray(1000), 10540640);
+getTargetByLinearSearch(array1k, 999);
 console.timeEnd("Linear Search 1k");
 
 console.time("Linear Search 100k");
-getTargetByLinearSearch(generateBigArray(100000), 10540640);
+getTargetByLinearSearch(array100k, 90050);
 console.timeEnd("Linear Search 100k");
 
 console.time("Linear Search 1M");
-getTargetByLinearSearch(generateBigArray(10000000), 10540640);
+getTargetByLinearSearch(array1M, 907000);
 console.timeEnd("Linear Search 1M");
 
 console.time("Linear Search 10M");
-getTargetByLinearSearch(generateBigArray(10000000), 10540640);
+getTargetByLinearSearch(array10M, 9000500);
 console.timeEnd("Linear Search 10M");
 
 console.log("---");
 
 console.time("Binary Search 1k");
-getTargetByBinarySearch(getTargetByBinarySearch(1000), 10540640);
+getTargetByBinarySearch(array1k, 999);
 console.timeEnd("Binary Search 1k");
 
 console.time("Binary Search 100k");
-getTargetByBinarySearch(generateBigArray(100000), 10540640);
+getTargetByBinarySearch(array100k, 90070);
 console.timeEnd("Binary Search 100k");
 
 console.time("Binary Search 1M");
-getTargetByBinarySearch(generateBigArray(10000000), 10540640);
+getTargetByBinarySearch(array1M, 900900);
 console.timeEnd("Binary Search 1M");
 
 console.time("Binary Search 10M");
-getTargetByBinarySearch(generateBigArray(10000000), 10540640);
+getTargetByBinarySearch(array10M, 9008000);
 console.timeEnd("Binary Search 10M");
